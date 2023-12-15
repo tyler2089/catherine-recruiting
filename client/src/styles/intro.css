@@ -1,0 +1,44 @@
+.container-wipe {
+  transition: all 0.5s ease-in;
+  height: 0vh;
+  opacity: 0%;
+}
+
+.container-wipe > * {
+  height: inherit;
+}
+
+.intro-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  transition: all 0.5s ease-in;
+}
+
+.intro {
+  margin: auto;
+  height: 50vh;
+  width: 50vw;
+}
+
+.not-revealed {
+  display: hidden;
+  opacity: 0;
+  color: #373638;
+  height: 10vh;
+  margin-bottom: 0vh;
+  text-align: end;
+  transform: rotate(180deg);
+}
+
+.revealed {
+  transition: all 0.4s ease-in-out;
+  opacity: 100;
+  color: #373638;
+  height: 10vh;
+  text-align: end;
+  margin-bottom: 10vh;
+  transform: rotate(180deg);
+  cursor: pointer;
+}

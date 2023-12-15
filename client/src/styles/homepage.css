@@ -1,0 +1,41 @@
+.homepage-no {
+  display: none !important;
+  height: 0vh;
+  width: 100vw;
+}
+
+.homepage-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  background-color: white;
+  animation: 2s cubic-bezier(0.25, 1, 0.3, 1) wipe-in-up both;
+}
+
+.links {
+  height: 20vh;
+  width: 0vw;
+  background-color: #373638;
+  transition: all 0.8s ease-in;
+  transform-origin: right;
+}
+
+.title-card {
+  height: 60vh;
+  width: 0vw;
+  background-color: #3f3f3f;
+  transition: all 0.6s ease-in-out;
+  transform-origin: right;
+}
+@keyframes wipe-in-up {
+  from {
+    clip-path: inset(100% 0 0 0);
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
