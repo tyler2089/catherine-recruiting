@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/catherine-recruiting/static/css/main.6512c98b.css",
+    "main.js": "/catherine-recruiting/static/js/main.3eaf311e.js",
+    "static/js/787.d5fa4d18.chunk.js": "/catherine-recruiting/static/js/787.d5fa4d18.chunk.js",
+    "static/media/catherineintrotest.mp4": "/catherine-recruiting/static/media/catherineintrotest.4403e340af78ad92f8f9.mp4",
+    "index.html": "/catherine-recruiting/index.html",
+    "main.6512c98b.css.map": "/catherine-recruiting/static/css/main.6512c98b.css.map",
+    "main.3eaf311e.js.map": "/catherine-recruiting/static/js/main.3eaf311e.js.map",
+    "787.d5fa4d18.chunk.js.map": "/catherine-recruiting/static/js/787.d5fa4d18.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6512c98b.css",
+    "static/js/main.3eaf311e.js"
+  ]
+}
