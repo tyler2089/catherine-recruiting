@@ -1,13 +1,17 @@
 import { useRef, useEffect } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import "../styles/intro.css";
 import setHomePage from "../actions/sethomepagedone";
-
+import setIntroAnimationDone from "../actions/introanimationdone";
 function Intro() {
+  // Variable Declaration
+  const indexStore = useSelector((state) => state.index);
   const dispatch = useDispatch();
   var intro = useRef();
   var arrow = useRef();
   var container = useRef();
+
+  // UseEffects
   useEffect(() => {
     if (intro.current) {
       intro.current.onended = function () {
@@ -17,6 +21,17 @@ function Intro() {
       };
     }
   }, [intro]);
+
+  useEffect(() => {
+    if (indexStore.homePageDone) {
+      container.current.className = "container-wipe";
+      container.current.addEventListener("animationend", function () {
+        dispatch(setIntroAnimationDone(true));
+        container.current.style.display = "none";
+      });
+    }
+  }, [indexStore]);
+  // JSX
   return (
     <div className="intro-container" ref={container}>
       <video
@@ -24,7 +39,7 @@ function Intro() {
         muted
         className="intro"
         ref={intro}
-        playsinline="playsinline"
+        playsInline
       >
         <source
           src={require("../static/catherineintrotest.mp4")}

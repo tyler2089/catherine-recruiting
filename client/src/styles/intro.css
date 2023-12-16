@@ -1,19 +1,21 @@
 .container-wipe {
-  transition: all 0.5s ease-in;
-  height: 0vh;
-  opacity: 0%;
+  animation: 1.5s cubic-bezier(0.25, 1, 0.3, 1) wipe-out-up both;
+  transition: all 2.5s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .container-wipe > * {
-  height: inherit;
+  transform: translateY(-500px);
+  transition: all 1s ease-in-out;
 }
-
 .intro-container {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  transition: all 0.5s ease-in;
 }
 
 .intro {
@@ -41,4 +43,21 @@
   margin-bottom: 10vh;
   transform: rotate(180deg);
   cursor: pointer;
+}
+
+@keyframes wipe-out-up {
+  from {
+    clip-path: inset(0 0 0 0);
+  }
+  to {
+    clip-path: inset(0 0 100% 0);
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .intro {
+    margin: auto;
+    height: 70vh;
+    width: 90vw;
+  }
 }

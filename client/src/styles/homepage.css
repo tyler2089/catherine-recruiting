@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Aboreto&family=Bungee&family=Montserrat&family=Playfair:opsz,wght@5..1200,300&family=Trirong:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Aboreto&family=Bungee&family=Kalnia&family=Montserrat&family=Playfair:opsz,wght@5..1200,300&family=Trirong:wght@300&display=swap");
+
 .homepage-no {
   display: none !important;
   height: 0vh;
@@ -12,30 +15,123 @@
   height: 100vh;
   width: 100vw;
   position: absolute;
-  background-color: white;
-  animation: 2s cubic-bezier(0.25, 1, 0.3, 1) wipe-in-up both;
-}
-
-.links {
-  height: 20vh;
-  width: 0vw;
-  background-color: #373638;
-  transition: all 0.8s ease-in;
-  transform-origin: right;
+  background-color: #dcdcdc;
+  animation: 2.5s cubic-bezier(0.25, 1, 0.3, 1) square-in-hesitate both;
 }
 
 .title-card {
+  height: 20vh;
+  width: 0vw;
+  background-color: #36454f;
+  transition: all 1s ease-in;
+  transform-origin: right;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Aboreto", sans-serif;
+  font-size: 1.4em;
+}
+
+.title-card h1 {
+  opacity: 0;
+  transition: all 0.5s ease-in;
+}
+
+.links {
   height: 60vh;
   width: 0vw;
-  background-color: #3f3f3f;
-  transition: all 0.6s ease-in-out;
+  background-color: #d3d3d3;
+  transition: all 1s ease-in-out;
   transform-origin: right;
+  box-shadow: 0px 10px 10px #333333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 0;
 }
-@keyframes wipe-in-up {
-  from {
-    clip-path: inset(100% 0 0 0);
+
+.link-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 60vw;
+  height: inherit;
+  color: #333333;
+  position: relative;
+  background-color: #d3d3d3;
+  overflow: hidden;
+}
+
+.link-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: var(--before-right, 100%);
+  width: 100%;
+  height: 100%;
+  background-image: var(--before-background-image, none);
+  background-size: 100% 100%;
+  transition: right 1s ease-in-out;
+  z-index: 0;
+}
+
+.link-container h2 {
+  font-family: "Kalnia", sans-serif;
+  border: 3px solid white;
+  padding: 20px 30px;
+  border-radius: 20px;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  background-color: #d3d3d3;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.link-container h2::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 100%;
+  width: 100%;
+  height: 100%;
+  background-color: #aaf0d1;
+  transition: right 0.3s ease-in-out;
+  z-index: -1;
+}
+.link-container h2:hover::before {
+  right: 0;
+}
+
+.link-container h2:hover {
+  border: 3px solid #aaf0d1;
+}
+
+@keyframes square-in-hesitate {
+  0% {
+    clip-path: inset(100% 100% 100% 100%);
   }
-  to {
+  40% {
+    clip-path: inset(33% 33% 33% 33%);
+  }
+  100% {
     clip-path: inset(0 0 0 0);
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .link-container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 100vw;
+  }
+
+  .title-card {
+    font-size: 1em;
+    text-align: center;
   }
 }
