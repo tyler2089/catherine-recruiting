@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/catherine-recruiting/static/css/main.6512c98b.css",
-    "main.js": "/catherine-recruiting/static/js/main.336891c4.js",
+    "main.css": "/catherine-recruiting/static/css/main.c6104be6.css",
+    "main.js": "/catherine-recruiting/static/js/main.4d66a5cd.js",
     "static/js/787.d5fa4d18.chunk.js": "/catherine-recruiting/static/js/787.d5fa4d18.chunk.js",
     "static/media/catherineintrotest.mp4": "/catherine-recruiting/static/media/catherineintrotest.4403e340af78ad92f8f9.mp4",
     "static/media/catherineintrotest.webm": "/catherine-recruiting/static/media/catherineintrotest.61c005e434c8453f92e1.webm",
     "index.html": "/catherine-recruiting/index.html",
-    "main.6512c98b.css.map": "/catherine-recruiting/static/css/main.6512c98b.css.map",
-    "main.336891c4.js.map": "/catherine-recruiting/static/js/main.336891c4.js.map",
+    "main.c6104be6.css.map": "/catherine-recruiting/static/css/main.c6104be6.css.map",
+    "main.4d66a5cd.js.map": "/catherine-recruiting/static/js/main.4d66a5cd.js.map",
     "787.d5fa4d18.chunk.js.map": "/catherine-recruiting/static/js/787.d5fa4d18.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6512c98b.css",
-    "static/js/main.336891c4.js"
+    "static/css/main.c6104be6.css",
+    "static/js/main.4d66a5cd.js"
   ]
 }
