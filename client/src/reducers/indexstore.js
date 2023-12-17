@@ -1,9 +1,13 @@
 import { createReducer } from "@reduxjs/toolkit";
 import setHomePage from "../actions/sethomepagedone";
 import setIntroAnimationDone from "../actions/introanimationdone";
+import setHomePageOption from "../actions/homepageoption";
+import setJobSelectAnimation from "../actions/jobselectanimation";
 const initialState = {
   homePageDone: false,
+  homePageOption: "",
   introAnimationDone: false,
+  jobSelectAnimationDone: false,
 };
 
 const indexReducer = createReducer(initialState, (builder) => {
@@ -13,7 +17,14 @@ const indexReducer = createReducer(initialState, (builder) => {
 
   builder.addCase(setIntroAnimationDone, (state, action) => {
     state.introAnimationDone = action.payload;
-    console.log(action.payload);
+  });
+
+  builder.addCase(setHomePageOption, (state, action) => {
+    state.homePageOption = action.payload;
+  });
+
+  builder.addCase(setJobSelectAnimation, (state, action) => {
+    state.jobSelectAnimation = action.payload;
   });
 });
 

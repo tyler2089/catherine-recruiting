@@ -1,9 +1,12 @@
 import { useRef, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import setHomePageOption from "../actions/homepageoption";
 import "../styles/homepage.css";
 
 function Homepage() {
+  // Variable Declaration
   const indexStore = useSelector((state) => state.index);
+  const dispatch = useDispatch();
   var homeContainer = useRef();
   var titleCard = useRef();
   var links = useRef();
@@ -13,12 +16,10 @@ function Homepage() {
   var energy = useRef();
   var linkContainer = useRef();
 
+  // UseEffects
   useEffect(() => {
-    if (
-      indexStore.introAnimationDone &&
-      homeContainer.current.className === "homepage-no"
-    ) {
-      homeContainer.current.className = "homepage-container";
+    if (indexStore.introAnimationDone && indexStore.homePageOption === "") {
+      homeContainer.current.style.display = "flex";
       homeContainer.current.addEventListener("animationend", function () {
         titleCard.current.style.width = "100vw";
         links.current.style.width = "100vw";
@@ -37,18 +38,39 @@ function Homepage() {
       });
     }
   }, [indexStore]);
+  // JSX
   return (
-    <div className="homepage-no" ref={homeContainer}>
+    <div className="homepage-container" ref={homeContainer}>
       <div className="title-card" ref={links}>
         <h1 ref={header}>Which industry are you here for?</h1>
       </div>
       <div className="links" ref={titleCard}>
         <div className="link-container" ref={linkContainer}>
-          <h2 ref={banking}>Banking</h2>
-          <h2 id="test" ref={healthcare}>
+          <h2
+            ref={banking}
+            onClick={() => {
+              dispatch(setHomePageOption("banking"));
+            }}
+          >
+            Banking
+          </h2>
+          <h2
+            id="test"
+            ref={healthcare}
+            onClick={() => {
+              dispatch(setHomePageOption("healthcare"));
+            }}
+          >
             Healthcare
           </h2>
-          <h2 ref={energy}>Renewable Energy</h2>
+          <h2
+            ref={energy}
+            onClick={() => {
+              dispatch(setHomePageOption("energy"));
+            }}
+          >
+            Renewable Energy
+          </h2>
         </div>
       </div>
     </div>
