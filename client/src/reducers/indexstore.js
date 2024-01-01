@@ -2,12 +2,13 @@ import { createReducer } from "@reduxjs/toolkit";
 import setHomePage from "../actions/sethomepagedone";
 import setIntroAnimationDone from "../actions/introanimationdone";
 import setHomePageOption from "../actions/homepageoption";
-import setJobSelectAnimation from "../actions/jobselectanimation";
+import navbarAnimationDone from "../actions/navbaranimation";
+
 const initialState = {
   homePageDone: false,
-  homePageOption: "",
+  homePageOption: "home",
   introAnimationDone: false,
-  jobSelectAnimationDone: false,
+  navbarAnimationDone: false,
 };
 
 const indexReducer = createReducer(initialState, (builder) => {
@@ -23,8 +24,9 @@ const indexReducer = createReducer(initialState, (builder) => {
     state.homePageOption = action.payload;
   });
 
-  builder.addCase(setJobSelectAnimation, (state, action) => {
-    state.jobSelectAnimation = action.payload;
+  builder.addCase(navbarAnimationDone, (state, action) => {
+    console.log(action.payload);
+    state.navbarAnimationDone = action.payload;
   });
 });
 

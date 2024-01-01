@@ -1,39 +1,74 @@
 @import url("https://fonts.googleapis.com/css2?family=Aboreto&family=Bungee&family=Montserrat&family=Playfair:opsz,wght@5..1200,300&family=Trirong:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Aboreto&family=Bungee&family=Kalnia&family=Montserrat&family=Playfair:opsz,wght@5..1200,300&family=Trirong:wght@300&display=swap");
-
 .homepage-container {
   display: none;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: end;
   height: 100vh;
   width: 100vw;
   position: absolute;
   background-color: #dcdcdc;
   animation: 2.5s cubic-bezier(0.25, 1, 0.3, 1) square-in-hesitate both;
+  overflow: hidden;
 }
 
 .title-card {
   height: 20vh;
   width: 0vw;
-  background-color: #36454f;
+  background-color: #4c607e;
   transition: all 1s ease-in;
   transform-origin: right;
   color: white;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: start;
   font-family: "Aboreto", sans-serif;
   font-size: 1.4em;
 }
 
-.title-card h1 {
+.company-name {
   opacity: 0;
   transition: all 0.5s ease-in;
+  margin: 20px 40px;
 }
 
+.company-name-container {
+  height: 70%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35%;
+  text-wrap: wrap;
+}
+
+.navbar {
+  width: 60%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  align-items: center;
+}
+
+.navbar h3 {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 50px;
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+  opacity: 0;
+}
+
+.navbar h3:hover {
+  background-color: #001f3f !important;
+}
 .links {
-  height: 60vh;
+  height: 80vh;
   width: 0vw;
   background-color: #d3d3d3;
   transition: all 1s ease-in-out;
@@ -117,6 +152,17 @@
 }
 
 @media only screen and (max-width: 500px) {
+  .navbar h3 {
+    font-size: 0.8em;
+    padding: 10px 8px 10px 8px;
+    margin: 0px 3px;
+    height: 100%;
+    text-align: center;
+  }
+
+  .navbar {
+    justify-content: space-around;
+  }
   .link-container {
     flex-direction: column;
     align-items: center;

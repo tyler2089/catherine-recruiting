@@ -1,0 +1,88 @@
+.jobsearch-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  opacity: 100%;
+}
+
+.jobfilter-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  height: 5%;
+}
+
+.jobfilter-navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  height: 15%;
+  width: 80%;
+}
+
+.jobfilter-container input[type="text"] {
+  font-size: 2em;
+  border: none;
+  padding: 1px 0px;
+}
+
+.jobfilter-navbar h2 {
+  padding: 5px 20px;
+  text-wrap: nowrap;
+  border: 2px solid white;
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+}
+
+.selected {
+  padding: 5px 20px;
+  text-wrap: nowrap;
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+  background-color: #9ca88e;
+  border: 2px solid #9ca88e !important;
+  color: white;
+}
+
+.jobfilter-navbar h2:hover {
+  background-color: #9ca88e;
+  border: 2px solid #9ca88e;
+  color: white;
+}
+
+.jobfilter-searchbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #9ca88e;
+  border-bottom-right-radius: 20px;
+  border-top-right-radius: 20px;
+  padding: none;
+  height: 100%;
+  background-color: #9ca88e;
+}
+
+.jobfilter-searchbar h2 {
+  padding: 4px 10px 4px 5px;
+  border: none;
+  border-bottom-right-radius: 20px;
+  border-top-right-radius: 20px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.jobfilter-searchbar h2:hover {
+  color: white;
+}
+
+.job-container {
+  height: 80%;
+  width: 80%;
+  background-color: white;
+}
