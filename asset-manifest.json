@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/catherine-recruiting/static/css/main.f7704fef.css",
-    "main.js": "/catherine-recruiting/static/js/main.56e2a677.js",
+    "main.css": "/catherine-recruiting/static/css/main.17443d55.css",
+    "main.js": "/catherine-recruiting/static/js/main.cf695025.js",
     "static/js/787.d5fa4d18.chunk.js": "/catherine-recruiting/static/js/787.d5fa4d18.chunk.js",
     "static/media/pexels-lukas-590016.jpg": "/catherine-recruiting/static/media/pexels-lukas-590016.bce4a526f95dfc12ac4a.jpg",
     "static/media/catherineintrotest.mp4": "/catherine-recruiting/static/media/catherineintrotest.4403e340af78ad92f8f9.mp4",
     "static/media/catherineintrotest.webm": "/catherine-recruiting/static/media/catherineintrotest.61c005e434c8453f92e1.webm",
     "static/media/GTWalsheimProRegular.woff": "/catherine-recruiting/static/media/GTWalsheimProRegular.00913d3058014281c0e0.woff",
     "index.html": "/catherine-recruiting/index.html",
-    "main.f7704fef.css.map": "/catherine-recruiting/static/css/main.f7704fef.css.map",
-    "main.56e2a677.js.map": "/catherine-recruiting/static/js/main.56e2a677.js.map",
+    "main.17443d55.css.map": "/catherine-recruiting/static/css/main.17443d55.css.map",
+    "main.cf695025.js.map": "/catherine-recruiting/static/js/main.cf695025.js.map",
     "787.d5fa4d18.chunk.js.map": "/catherine-recruiting/static/js/787.d5fa4d18.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f7704fef.css",
-    "static/js/main.56e2a677.js"
+    "static/css/main.17443d55.css",
+    "static/js/main.cf695025.js"
   ]
 }
