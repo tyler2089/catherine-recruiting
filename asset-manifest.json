@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/catherine-recruiting/static/css/main.2ea3d3e1.css",
-    "main.js": "/catherine-recruiting/static/js/main.eeeeb8c5.js",
+    "main.js": "/catherine-recruiting/static/js/main.279bb6cd.js",
     "static/js/787.d5fa4d18.chunk.js": "/catherine-recruiting/static/js/787.d5fa4d18.chunk.js",
     "static/media/pexels-lukas-590016.jpg": "/catherine-recruiting/static/media/pexels-lukas-590016.bce4a526f95dfc12ac4a.jpg",
     "static/media/GTWalsheimProRegular.woff": "/catherine-recruiting/static/media/GTWalsheimProRegular.00913d3058014281c0e0.woff",
     "index.html": "/catherine-recruiting/index.html",
     "main.2ea3d3e1.css.map": "/catherine-recruiting/static/css/main.2ea3d3e1.css.map",
-    "main.eeeeb8c5.js.map": "/catherine-recruiting/static/js/main.eeeeb8c5.js.map",
+    "main.279bb6cd.js.map": "/catherine-recruiting/static/js/main.279bb6cd.js.map",
     "787.d5fa4d18.chunk.js.map": "/catherine-recruiting/static/js/787.d5fa4d18.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.2ea3d3e1.css",
-    "static/js/main.eeeeb8c5.js"
+    "static/js/main.279bb6cd.js"
   ]
 }
