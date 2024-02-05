@@ -5,6 +5,7 @@ import navbarAnimationDone from "../actions/navbaranimation";
 import HomeIndex from "../pages/homeindex";
 import JobSearch from "../pages/jobsearch";
 import Contact from "../pages/contact";
+import AboutUs from "../pages/about";
 import "../styles/homepage.css";
 
 function Homepage() {
@@ -102,11 +103,7 @@ function Homepage() {
           return <Contact></Contact>;
 
         case "about":
-          return (
-            <div>
-              <h1>About Us</h1>
-            </div>
-          );
+          return <AboutUs></AboutUs>;
       }
     }
   };
@@ -116,7 +113,7 @@ function Homepage() {
       <div className="title-card" ref={titleCard}>
         <div className="company-name-container">
           <h1 className="company-name" ref={header}>
-            Catherine Recruiting
+            Bank Talent Solutions
           </h1>
         </div>
         <nav className="navbar">
