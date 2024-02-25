@@ -16,14 +16,11 @@
 }
 
 .about-header {
-<<<<<<< HEAD
   display: flex;
   flex-direction: row;
   width: 100%;
   align-items: center;
   justify-content: center;
-=======
->>>>>>> 74beae702ae67f9be060a946353f15387a6e8da3
   margin: 40px 0px;
   font-size: 3em;
   color: white;
