@@ -2,11 +2,21 @@ import "../styles/contact.css";
 import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import Fade from "react-reveal/Fade";
-import { animateHeader } from "../components/animateheader";
+import animateHeader from "../components/animateheader";
 function Contact() {
   const companyName = useRef();
   const email = useRef();
   const helpText = useRef();
+
+  const mobileHeader = () => {
+    return (
+      <div className="mobile-header">
+        {animateHeader("Where Talent")}
+        {animateHeader("Meets Opportunity.")}
+      </div>
+    );
+  };
+
   const handleSubmit = (e) => {
     if (companyName.current.value === "") {
       alert("Company Name is required");
@@ -46,15 +56,27 @@ function Contact() {
   };
   return (
     <div className="contact-container">
-      <Fade right cascade>
+      <video
+        autoPlay={true}
+        muted
+        loop
+        playsInline
+        className="background-video"
+      >
+        <source
+          src={require("../static/contactvideo.mp4")}
+          type="video/mp4"
+        ></source>
+      </video>
+      {window.innerWidth < 500 ? (
+        mobileHeader()
+      ) : (
         <div className="contact-header">
-          <h1>Contact us</h1>
-          <h3>
-            Need to get in contact with us? Fill out and submit the form with
-            your inquiry.
-          </h3>
+          {animateHeader("Join Our Team!")}
+          {animateHeader("Fill out and submit the form.")}
+          {animateHeader("We will be in contact with you shortly!")}
         </div>
-      </Fade>
+      )}
       <Fade right cascade>
         <div className="contact-form">
           <div className="input-with-label">
