@@ -16,13 +16,7 @@ const store = configureStore({
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <Provider store={store}>
-<<<<<<< HEAD
     <AppRouter />
-=======
-    <React.StrictMode>
-      <AppRouter />
-    </React.StrictMode>
->>>>>>> 74beae702ae67f9be060a946353f15387a6e8da3
   </Provider>
 );
 
