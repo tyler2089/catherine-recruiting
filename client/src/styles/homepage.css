@@ -155,6 +155,8 @@
 @media only screen and (max-width: 500px) {
   .company-name-container {
     width: 100%;
+    height: 80%;
+    font-size: 0.8em;
   }
   .title-card {
     display: flex;

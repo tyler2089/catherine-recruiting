@@ -42,7 +42,9 @@ function HomeIndex() {
         ></source>
       </video>
       <div className="homeindex-header">
-        <h1>Where talent meets opportunity.</h1>
+        {window.innerWidth < mobile
+          ? mobileHeader()
+          : animateHeader("Where talent meets opportunity.")}
       </div>
       <div className="button-container">
         <button
