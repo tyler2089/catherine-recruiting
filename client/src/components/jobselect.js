@@ -15,9 +15,6 @@ function JobSelect() {
       "https://saut95n2e9.execute-api.us-east-1.amazonaws.com/Test/LambdaTest",
       {
         method: "GET",
-        headers: {
-          genre: indexStore.homePageOption,
-        },
       }
     )
       .then((result) => result.json())

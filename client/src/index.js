@@ -2,10 +2,12 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./components/App";
+import { HashRouter } from "react-router-dom";
 import reportWebVitals from "./reportWebVitals";
 import { configureStore } from "@reduxjs/toolkit";
 import { Provider } from "react-redux";
 import indexStore from "./reducers/indexstore";
+import AppRouter from "./routes/route";
 const store = configureStore({
   reducer: {
     index: indexStore,
@@ -14,9 +16,7 @@ const store = configureStore({
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <Provider store={store}>
-    <React.StrictMode>
-      <App />
-    </React.StrictMode>
+    <AppRouter />
   </Provider>
 );
 

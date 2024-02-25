@@ -1,0 +1,214 @@
+@font-face {
+  font-family: GT Walsheim Pro;
+  src: local("GT Walsheim Pro Regular"), local("GTWalsheimProRegular"),
+    url(../static/GTWalsheimProRegular.woff) format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+.contact-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  width: 100%;
+  height: 100%;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  color: white;
+  align-items: center;
+  width: 30%;
+  margin: auto;
+  background-color: #4c607e;
+  height: 70%;
+  padding: 20px;
+  box-shadow: 0px 0px 10px black;
+}
+
+.contact-header {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  height: 100%;
+  width: 60%;
+  margin: auto;
+  justify-content: center;
+  align-items: start;
+  font-size: 1.5em;
+}
+
+.input-with-label {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.input-with-label h1 {
+  font-size: 1.4em;
+  margin: 10px;
+  font-family: "GT Walsheim Pro";
+}
+.input-with-label input {
+  width: 95%;
+  font-size: 1.3em;
+}
+
+.input-with-label textarea {
+  height: 250px;
+  width: 100%;
+  resize: none;
+}
+.contact-mobile-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 20%;
+  width: 100%;
+  color: white;
+  font-size: 1.5em;
+}
+.submit-button {
+  display: inline-block;
+  position: relative;
+  color: white;
+  border: none;
+  font-family: "GT Walsheim Pro";
+  padding: 10px 20px;
+  font-size: 2em;
+  text-wrap: nowrap;
+  background-color: rgba(156, 168, 142, 1);
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+  border: 2px solid white;
+}
+
+.submit-button:hover {
+  color: rgba(156, 168, 142, 1);
+  background-color: white;
+  border: 2px solid rgba(156, 168, 142, 1);
+}
+
+.submit-button::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 5px;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(156, 168, 142, 1);
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.submit-button:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.resume-button {
+  display: inline-block;
+  position: relative;
+  color: white;
+  border: none;
+  font-family: "GT Walsheim Pro";
+  padding: 10px 20px;
+  font-size: 2em;
+  text-wrap: nowrap;
+  background-color: #001f3f;
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+  border: 2px solid white;
+}
+
+.resume-button:hover {
+  color: #001f3f;
+  background-color: white;
+  border: 2px solid #001f3f;
+}
+
+.resume-button::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 5px;
+  bottom: 0;
+  left: 0;
+  background-color: #001f3f;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.resume-button:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+@media only screen and (max-width: 499px) {
+  .contact-container {
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    text-align: center;
+  }
+
+  .contact-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    width: 80%;
+    height: 20%;
+    font-size: 0.6em;
+    margin: 0px;
+  }
+  .contact-header h3 {
+    font-size: 1.4em;
+  }
+
+  .contact-header h1 {
+    margin: 5px;
+  }
+
+  .contact-form {
+    width: 70%;
+    height: 70%;
+  }
+  .contact-form textarea {
+    height: 80px;
+  }
+}
+@media only screen and (min-width: 500px) and (max-width: 600px) {
+  .contact-container {
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    text-align: center;
+  }
+
+  .contact-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 20%;
+    font-size: 0.7em;
+  }
+
+  .contact-form {
+    width: 70%;
+    height: 60%;
+  }
+  .contact-form textarea {
+    height: 80px;
+  }
+}

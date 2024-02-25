@@ -1,45 +1,46 @@
 import "../styles/contact.css";
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import Fade from "react-reveal/Fade";
 import animateHeader from "../components/animateheader";
-function Contact() {
+function Careers() {
+  const [file, setFile] = useState(null);
   const companyName = useRef();
   const email = useRef();
   const helpText = useRef();
-
   const mobileHeader = () => {
     return (
       <div className="contact-mobile-header">
-        {animateHeader("Contact Us")}
-        {animateHeader("We will be in contact shortly!")}
+        {animateHeader("Join Our Team!")}
+        {animateHeader("Fill out and submit the form.")}
       </div>
     );
   };
-
-  const header = () => {
-    return (
-      <div className="contact-header">
-        {animateHeader("Contact Us")}
-        {animateHeader("We will be in contact shortly!")}
-      </div>
-    );
+  const handleFileUpload = () => {
+    const fileInput = document.createElement("input");
+    fileInput.type = "file";
+    fileInput.accept = "application/pdf";
+    fileInput.addEventListener("change", (event) => {
+      const file = event.target.files[0];
+      setFile(file);
+    });
+    fileInput.click();
   };
   const handleSubmit = (e) => {
     if (companyName.current.value === "") {
-      alert("Company Name is required");
+      alert("Your name is required");
       return;
     } else if (email.current.value === "") {
       alert("Email is required");
       return;
-    } else if (helpText.current.value === "") {
-      alert("Help text is required");
+    } else if (file === null) {
+      alert("Resume is required");
       return;
     } else {
       const templateParams = {
         company: companyName.current.value,
         email: email.current.value,
-        message: helpText.current.value,
+        message: file,
       };
 
       emailjs
@@ -54,7 +55,7 @@ function Contact() {
             alert("Successfully sent, we will be in contact with you shortly!");
             companyName.current.value = "";
             email.current.value = "";
-            helpText.current.value = "";
+            setFile(null);
           },
           (err) => {
             alert("FAILED...", err);
@@ -72,17 +73,15 @@ function Contact() {
         className="background-video"
       >
         <source
-          src={require("../static/contactvideo.mp4")}
+          src={require("../static/careersvideo.mp4")}
           type="video/mp4"
         ></source>
       </video>
-
-      {window.innerWidth > 500 ? header() : mobileHeader()}
-
-      <Fade right cascade>
+      {window.innerWidth > 500 ? "" : mobileHeader()}
+      <Fade left cascade>
         <div className="contact-form">
           <div className="input-with-label">
-            <h1>Company Name*</h1>
+            <h1>Your Name*</h1>
             <input type="text" name="name" ref={companyName}></input>
           </div>
           <div className="input-with-label">
@@ -90,16 +89,28 @@ function Contact() {
             <input type="text" name="email" ref={email}></input>
           </div>
           <div className="input-with-label">
-            <h1>What can we help you with?*</h1>
-            <textarea name="help-text" ref={helpText}></textarea>
+            <h1>Resume *</h1>
+            {file ? <h1>{file.name}</h1> : <h3></h3>}
+            <button onClick={handleFileUpload} className="resume-button">
+              Upload Resume
+            </button>
           </div>
           <h1 className="submit-button" onClick={() => handleSubmit()}>
             Submit
           </h1>
         </div>
       </Fade>
+      {window.innerWidth > 500 ? (
+        <div className="contact-header">
+          {animateHeader("Join Our Team!")}
+          {animateHeader("Fill out and submit the form.")}
+          {animateHeader("We will be in contact with you shortly!")}
+        </div>
+      ) : (
+        ""
+      )}
     </div>
   );
 }
 
-export default Contact;
+export default Careers;

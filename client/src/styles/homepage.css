@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Aboreto&family=Bungee&family=Montserrat&family=Playfair:opsz,wght@5..1200,300&family=Trirong:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Aboreto&family=Bungee&family=Kalnia&family=Montserrat&family=Playfair:opsz,wght@5..1200,300&family=Trirong:wght@300&display=swap");
 .homepage-container {
-  display: none;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: end;
@@ -9,13 +9,13 @@
   width: 100vw;
   position: absolute;
   background-color: #dcdcdc;
-  animation: 2.5s cubic-bezier(0.25, 1, 0.3, 1) square-in-hesitate both;
   overflow: hidden;
+  z-index: 1;
 }
 
 .title-card {
   height: 20vh;
-  width: 0vw;
+  width: 100vw;
   background-color: #4c607e;
   transition: all 1s ease-in;
   transform-origin: right;
@@ -29,7 +29,7 @@
 }
 
 .company-name {
-  opacity: 0;
+  opacity: 100;
   transition: all 0.5s ease-in;
   margin: 20px 40px;
 }
@@ -61,7 +61,8 @@
   padding: 0px 50px;
   transition: all 0.5s ease-in-out;
   cursor: pointer;
-  opacity: 0;
+  text-align: center;
+  opacity: 100;
 }
 
 .navbar h3:hover {
@@ -69,7 +70,7 @@
 }
 .links {
   height: 80vh;
-  width: 0vw;
+  width: 100vw;
   background-color: #d3d3d3;
   transition: all 1s ease-in-out;
   transform-origin: right;
@@ -110,7 +111,7 @@
   border: 3px solid white;
   padding: 20px 30px;
   border-radius: 20px;
-  opacity: 0;
+  opacity: 100;
   transition: all 0.3s ease-in-out;
   cursor: pointer;
   background-color: #d3d3d3;
@@ -152,6 +153,19 @@
 }
 
 @media only screen and (max-width: 500px) {
+  .company-name-container {
+    width: 100%;
+  }
+  .title-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .title-card h1 {
+    margin: 12px;
+  }
   .navbar h3 {
     font-size: 0.8em;
     padding: 10px 8px 10px 8px;
@@ -161,6 +175,41 @@
   }
 
   .navbar {
+    justify-content: space-around;
+  }
+  .link-container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 100vw;
+  }
+
+  .title-card {
+    font-size: 1em;
+    text-align: center;
+  }
+}
+
+@media only screen and (min-width: 500px) and (max-width: 1100px) {
+  .company-name-container {
+    width: 100%;
+  }
+  .title-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .navbar h3 {
+    font-size: 2em;
+    padding: 10px 8px 10px 8px;
+    margin: 0px 3px;
+    height: 100%;
+    text-align: center;
+  }
+
+  .navbar {
+    width: 70%;
     justify-content: space-around;
   }
   .link-container {

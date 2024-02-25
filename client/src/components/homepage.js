@@ -2,9 +2,11 @@ import { useRef, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import setHomePageOption from "../actions/homepageoption";
 import navbarAnimationDone from "../actions/navbaranimation";
+import Careers from "../pages/careers";
 import HomeIndex from "../pages/homeindex";
 import JobSearch from "../pages/jobsearch";
 import Contact from "../pages/contact";
+import AboutUs from "../pages/about";
 import "../styles/homepage.css";
 
 function Homepage() {
@@ -19,42 +21,10 @@ function Homepage() {
   var jobSearchLink = useRef();
   var employersLink = useRef();
   var aboutUsLink = useRef();
+  var careersLink = useRef();
 
   // UseEffects
   useEffect(() => {
-    //Navbar Intro Animation
-    if (indexStore.introAnimationDone) {
-      homeContainer.current.style.display = "flex";
-      homeContainer.current.addEventListener("animationend", function () {
-        titleCard.current.style.width = "100vw";
-        links.current.style.width = "100vw";
-      });
-
-      titleCard.current.addEventListener("transitionend", function () {
-        header.current.style.opacity = "100";
-      });
-
-      header.current.addEventListener("transitionend", function () {
-        homeLink.current.style.opacity = "100";
-      });
-
-      homeLink.current.addEventListener("transitionend", function () {
-        jobSearchLink.current.style.opacity = "100";
-      });
-
-      jobSearchLink.current.addEventListener("transitionend", function () {
-        employersLink.current.style.opacity = "100";
-      });
-
-      employersLink.current.addEventListener("transitionend", function () {
-        aboutUsLink.current.style.opacity = "100";
-      });
-
-      aboutUsLink.current.addEventListener("transitionend", function () {
-        dispatch(navbarAnimationDone(true));
-      });
-    }
-
     // Navbar Coloring
     if (indexStore.homePageOption) {
       switch (indexStore.homePageOption) {
@@ -63,6 +33,7 @@ function Homepage() {
           jobSearchLink.current.style.backgroundColor = "#4C607E";
           employersLink.current.style.backgroundColor = "#4C607E";
           aboutUsLink.current.style.backgroundColor = "#4C607E";
+          careersLink.current.style.backgroundColor = "#4C607E";
           break;
 
         case "jobsearch":
@@ -70,6 +41,7 @@ function Homepage() {
           jobSearchLink.current.style.backgroundColor = "#001F3F";
           employersLink.current.style.backgroundColor = "#4C607E";
           aboutUsLink.current.style.backgroundColor = "#4C607E";
+          careersLink.current.style.backgroundColor = "#4C607E";
           break;
 
         case "employer":
@@ -77,6 +49,7 @@ function Homepage() {
           jobSearchLink.current.style.backgroundColor = "#4C607E";
           employersLink.current.style.backgroundColor = "#001F3F";
           aboutUsLink.current.style.backgroundColor = "#4C607E";
+          careersLink.current.style.backgroundColor = "#4C607E";
           break;
 
         case "about":
@@ -84,13 +57,22 @@ function Homepage() {
           jobSearchLink.current.style.backgroundColor = "#4C607E";
           employersLink.current.style.backgroundColor = "#4C607E";
           aboutUsLink.current.style.backgroundColor = "#001F3F";
+          careersLink.current.style.backgroundColor = "#4C607E";
+          break;
+
+        case "careers":
+          homeLink.current.style.backgroundColor = "#4C607E";
+          jobSearchLink.current.style.backgroundColor = "#4C607E";
+          employersLink.current.style.backgroundColor = "#4C607E";
+          aboutUsLink.current.style.backgroundColor = "#4C607E";
+          careersLink.current.style.backgroundColor = "#001F3F";
           break;
       }
     }
   }, [indexStore]);
 
   const Display = () => {
-    if (indexStore.homePageOption && indexStore.navbarAnimationDone) {
+    if (indexStore.homePageOption) {
       switch (indexStore.homePageOption) {
         case "home":
           return <HomeIndex></HomeIndex>;
@@ -100,13 +82,10 @@ function Homepage() {
 
         case "employer":
           return <Contact></Contact>;
-
+        case "careers":
+          return <Careers></Careers>;
         case "about":
-          return (
-            <div>
-              <h1>About Us</h1>
-            </div>
-          );
+          return <AboutUs></AboutUs>;
       }
     }
   };
@@ -116,7 +95,7 @@ function Homepage() {
       <div className="title-card" ref={titleCard}>
         <div className="company-name-container">
           <h1 className="company-name" ref={header}>
-            Catherine Recruiting
+            Bank Talent Solutions
           </h1>
         </div>
         <nav className="navbar">
@@ -137,6 +116,12 @@ function Homepage() {
             onClick={() => dispatch(setHomePageOption("employer"))}
           >
             Employers
+          </h3>
+          <h3
+            ref={careersLink}
+            onClick={() => dispatch(setHomePageOption("careers"))}
+          >
+            Join Our Team
           </h3>
           <h3
             ref={aboutUsLink}
