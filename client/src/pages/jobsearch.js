@@ -29,15 +29,11 @@ function JobSearch() {
               <h4>{`$${job.SALARY}/hour`}</h4>
             )}
           </div>
-<<<<<<< HEAD
           <p style={{ whiteSpace: "pre-line" }}>
             {job.DESCRIPTION.length > 250
               ? `${job.DESCRIPTION.substring(0, 250)}...`
               : job.DESCRIPTION}
           </p>
-=======
-          <p style={{ whiteSpace: "pre-line" }}>{job.DESCRIPTION}</p>
->>>>>>> 74beae702ae67f9be060a946353f15387a6e8da3
         </div>
       </Fade>
     );
@@ -63,14 +59,11 @@ function JobSearch() {
           .filter((job) => job.GENRE === "banking")
           .map((job) => produceCard(job));
 
-<<<<<<< HEAD
       case "executive":
         return indexStore.jobList
           .filter((job) => job.GENRE === "executive")
           .map((job) => produceCard(job));
 
-=======
->>>>>>> 74beae702ae67f9be060a946353f15387a6e8da3
       case "compliance":
         return indexStore.jobList
           .filter((job) => job.GENRE === "compliance")
@@ -165,7 +158,6 @@ function JobSearch() {
           </h2>
           <h2
             onClick={() =>
-<<<<<<< HEAD
               filterSelection === "executive"
                 ? setFilterSelection(null)
                 : setFilterSelection("executive")
@@ -196,28 +188,6 @@ function JobSearch() {
           </h2>
           <h2
             onClick={() =>
-=======
-              filterSelection === "compliance"
-                ? setFilterSelection(null)
-                : setFilterSelection("compliance")
-            }
-            className={filterSelection === "compliance" ? "selected" : null}
-          >
-            Compliance
-          </h2>
-          <h2
-            onClick={() =>
-              filterSelection === "it"
-                ? setFilterSelection(null)
-                : setFilterSelection("it")
-            }
-            className={filterSelection === "it" ? "selected" : null}
-          >
-            I.T.
-          </h2>
-          <h2
-            onClick={() =>
->>>>>>> 74beae702ae67f9be060a946353f15387a6e8da3
               filterSelection === "administration"
                 ? setFilterSelection(null)
                 : setFilterSelection("administration")
@@ -263,7 +233,6 @@ function JobSearch() {
   ) : (
     <Fade right cascade>
       <div className="jobapply-container">
-<<<<<<< HEAD
         <div className="jobapply-description">
           <h1
             onClick={() => {
@@ -320,47 +289,6 @@ function JobSearch() {
               Submit
             </button>
           </div>
-=======
-        <h1
-          onClick={() => {
-            setFile(null);
-            setJobSelection(null);
-          }}
-          className="exit-jobapply"
-        >
-          X
-        </h1>
-        <h1>{jobSelection.TITLE}</h1>
-        <h2>{jobSelection.COMPANY}</h2>
-        {jobSelection.HOURLY === 0 ? (
-          <h3>{`From $${parseFloat(jobSelection.SALARY).toLocaleString()}`}</h3>
-        ) : (
-          <h3>{`$${jobSelection.SALARY}/hour`}</h3>
-        )}
-        <p style={{ whiteSpace: "pre-line" }}>{jobSelection.DESCRIPTION}</p>
-        <div className="jobapply-application">
-          <h2>Apply</h2>
-          <div className="jobapply-inputrow">
-            <h3>First Name</h3>
-            <input type="text" placeholder="First Name" ref={firstName}></input>
-          </div>
-          <div className="jobapply-inputrow">
-            <h3>Last Name</h3>
-            <input type="text" placeholder="Last Name" ref={lastName}></input>
-          </div>
-          <div className="file-upload">
-            <h3>{!file ? "" : file.name}</h3>
-            <button onClick={handleFileUpload}>Upload PDF</button>
-          </div>
-          <button
-            className="filesubmit-button"
-            onClick={() =>
-              handleSubmit(jobSelection.TITLE, jobSelection.COMPANY)
-            }
-          >
-            Submit
-          </button>
->>>>>>> 74beae702ae67f9be060a946353f15387a6e8da3
         </div>
       </div>
     </Fade>

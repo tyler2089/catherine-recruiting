@@ -2,7 +2,7 @@ import "../styles/contact.css";
 import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import Fade from "react-reveal/Fade";
-
+import { animateHeader } from "../components/animateheader";
 function Contact() {
   const companyName = useRef();
   const email = useRef();

@@ -65,10 +65,7 @@ const AdminJobCreate = () => {
           <label htmlFor="industry">Job Industry:</label>
           <select id="industry" name="industry" ref={industry}>
             <option value="banking">Banking</option>
-<<<<<<< HEAD
             <option value="executive">Executive</option>
-=======
->>>>>>> 74beae702ae67f9be060a946353f15387a6e8da3
             <option value="compliance">Compliance</option>
             <option value="it">I.T.</option>
             <option value="administration">Administration</option>

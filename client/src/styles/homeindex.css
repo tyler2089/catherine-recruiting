@@ -81,7 +81,6 @@
   transform: scaleX(1);
   transform-origin: bottom left;
 }
-<<<<<<< HEAD
 
 .mobile-header {
   display: flex;
@@ -90,8 +89,6 @@
   width: 100%;
   font-size: 2em;
 }
-=======
->>>>>>> 74beae702ae67f9be060a946353f15387a6e8da3
 @media only screen and (max-width: 600px) {
   .homeindex-header {
     font-size: 1.3em;
