@@ -22,7 +22,11 @@ function App() {
   }
 
   useEffect(() => {
+<<<<<<< HEAD
     if (!indexStore.calledApi) {
+=======
+    if (indexStore.introAnimationDone && !indexStore.calledApi) {
+>>>>>>> 74beae702ae67f9be060a946353f15387a6e8da3
       fetchData();
     }
   }, [indexStore]);

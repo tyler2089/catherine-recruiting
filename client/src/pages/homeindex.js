@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import setHomePageOption from "../actions/homepageoption";
 import image from "../static/pexels-lukas-590016.jpg";
 import Fade from "react-reveal/Slide";
-import animateHeader from "../components/animateheader";
+
 function HomeIndex() {
   const indexStore = useSelector((state) => state.index);
   const dispatch = useDispatch();
@@ -42,11 +42,7 @@ function HomeIndex() {
         ></source>
       </video>
       <div className="homeindex-header">
-        {indexStore.calledApi
-          ? window.innerWidth > mobile
-            ? animateHeader("Where Talent Meets Opportunity.")
-            : mobileHeader()
-          : ""}
+        <h1>Where talent meets opportunity.</h1>
       </div>
       <div className="button-container">
         <button

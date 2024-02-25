@@ -164,8 +164,12 @@
   }
 
   .jobfilter-navbar h2 {
+<<<<<<< HEAD
     font-size: 0.9em;
     padding: 5px 10px;
+=======
+    font-size: 1em;
+>>>>>>> 74beae702ae67f9be060a946353f15387a6e8da3
     margin: 0px;
   }
   .jobfilter-searchbar {

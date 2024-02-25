@@ -2,14 +2,23 @@ import "../styles/about.css";
 import Fade from "react-reveal/Fade";
 import setHomePageOption from "../actions/homepageoption";
 import { useDispatch } from "react-redux";
+<<<<<<< HEAD
 import animateHeader from "../components/animateheader";
+=======
+>>>>>>> 74beae702ae67f9be060a946353f15387a6e8da3
 function AboutUs() {
   const dispatch = useDispatch();
   return (
     <div className="about-container">
+<<<<<<< HEAD
       <div className="about-header">
         {animateHeader("About Bank Talent Solutions")}
       </div>
+=======
+      <Fade left>
+        <h1 className="about-header">ABOUT BANK TALENT SOLUTIONS</h1>
+      </Fade>
+>>>>>>> 74beae702ae67f9be060a946353f15387a6e8da3
       <Fade right cascade>
         <div className="about-section">
           <h1>Who we are</h1>
