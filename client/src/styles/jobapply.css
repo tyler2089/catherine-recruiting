@@ -96,16 +96,16 @@
   margin: 5px;
   font-size: 1em;
   text-wrap: nowrap;
-  background-color: rgba(156, 168, 142, 1);
+  background-color: rgb(137, 148, 125);
   cursor: pointer;
   transition: all 0.2s ease-in;
   border: 2px solid white;
 }
 
 .jobapply-section-button:hover {
-  color: rgba(156, 168, 142, 1);
+  color: rgb(137, 148, 125);
   background-color: white;
-  border: 2px solid rgba(156, 168, 142, 1);
+  border: 2px solid rgb(137, 148, 125);
 }
 
 .jobapply-section-button::after {
@@ -116,7 +116,7 @@
   height: 3px;
   bottom: 0;
   left: 0;
-  background-color: rgba(156, 168, 142, 1);
+  background-color: rgb(137, 148, 125);
   transform-origin: bottom right;
   transition: transform 0.25s ease-out;
 }

@@ -9,12 +9,15 @@
   background: rgb(156, 168, 142);
   background: linear-gradient(
     180deg,
-    rgba(156, 168, 142, 1) 0%,
-    rgba(156, 168, 142, 1) 45%,
-    rgba(0, 212, 255, 0) 46%
+    rgb(137, 148, 125) 0%,
+    rgb(137, 148, 125) 45%,
+    rgba(112, 112, 112, 0) 46%
   );
 }
 
+ul {
+  margin: 0;
+}
 .about-header {
   display: flex;
   flex-direction: row;
@@ -22,9 +25,13 @@
   align-items: center;
   justify-content: center;
   margin: 40px 0px;
-  font-size: 3em;
+  font-size: 2em;
   color: white;
   text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.about-header > * {
+  width: inherit;
 }
 .about-section {
   width: 70%;
@@ -37,7 +44,7 @@
 
 .about-section h1,
 .about-section h2 {
-  color: rgba(156, 168, 142, 1);
+  color: #001f3f;
 }
 
 .about-buttons {
@@ -49,7 +56,8 @@
 }
 
 .about-buttons h1 {
-  border: 2px solid rgb(156, 168, 142);
+  border: 2px solid rgb(137, 148, 125);
+  color: rgb(137, 148, 125);
   padding: 5px 20px;
   border-radius: 20px;
   cursor: pointer;
@@ -57,7 +65,7 @@
 }
 
 .about-buttons h1:hover {
-  background-color: rgb(156, 168, 142);
+  background-color: rgb(137, 148, 125);
   color: white;
 }
 
@@ -68,8 +76,7 @@
 }
 @media only screen and (max-width: 499px) {
   .about-header {
-    font-size: 1.8em;
-    width: 80%;
+    font-size: 1.5em;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   }
 

@@ -5,11 +5,12 @@ function animateHeader(word) {
   var output = [];
   var count = 0;
 
-  arr.forEach((letter) => {
+  arr.forEach((letter, index) => {
     count % 2 === 0
       ? letter === " "
         ? output.push(
             <div
+              key={index}
               className="animated-header-up"
               style={{ "--animation-duration": `${Math.random() * 2 + 0.25}s` }}
             >
@@ -18,6 +19,7 @@ function animateHeader(word) {
           )
         : output.push(
             <div
+              key={index}
               className="animated-header-up"
               style={{ "--animation-duration": `${Math.random() * 2 + 0.25}s` }}
             >
@@ -27,6 +29,7 @@ function animateHeader(word) {
       : letter === " "
       ? output.push(
           <div
+            key={index}
             className="animated-header-down"
             style={{ "--animation-duration": `${Math.random() * 2 + 0.25}s` }}
           >
@@ -35,6 +38,7 @@ function animateHeader(word) {
         )
       : output.push(
           <div
+            key={index}
             className="animated-header-down"
             style={{ "--animation-duration": `${Math.random() * 2 + 0.25}s` }}
           >

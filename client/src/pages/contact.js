@@ -11,8 +11,8 @@ function Contact() {
   const mobileHeader = () => {
     return (
       <div className="mobile-header">
-        {animateHeader("Where Talent")}
-        {animateHeader("Meets Opportunity.")}
+        {animateHeader("We're glad you're here!")}
+        {animateHeader("How can we help?")}
       </div>
     );
   };
@@ -68,13 +68,12 @@ function Contact() {
           type="video/mp4"
         ></source>
       </video>
-      {window.innerWidth < 500 ? (
+      {window.innerWidth < 1300 ? (
         mobileHeader()
       ) : (
         <div className="contact-header">
-          {animateHeader("Join Our Team!")}
-          {animateHeader("Fill out and submit the form.")}
-          {animateHeader("We will be in contact with you shortly!")}
+          {animateHeader("We're glad you're here!")}
+          {animateHeader("How can we help?")}
         </div>
       )}
       <Fade right cascade>

@@ -10,6 +10,7 @@ function HomeIndex() {
   const dispatch = useDispatch();
   const [homeSelected, setHomeSelected] = useState(null);
   const mobile = 500;
+  const tablet = 1300;
 
   const mobileHeader = () => {
     return (
@@ -42,9 +43,11 @@ function HomeIndex() {
         ></source>
       </video>
       <div className="homeindex-header">
-        {window.innerWidth < mobile
-          ? mobileHeader()
-          : animateHeader("Where talent meets opportunity.")}
+        {indexStore.calledApi
+          ? window.innerWidth < tablet
+            ? mobileHeader()
+            : animateHeader("Where talent meets opportunity.")
+          : ""}
       </div>
       <div className="button-container">
         <button

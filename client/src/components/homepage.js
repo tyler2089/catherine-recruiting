@@ -24,48 +24,59 @@ function Homepage() {
   var careersLink = useRef();
 
   // UseEffects
+
+  useEffect(() => {
+    if (header.current) {
+      header.current.style.setProperty("--distance", "100%");
+      header.current.addEventListener("transitionend", () => {
+        header.current.style.getPropertyValue("--distance") === "100%"
+          ? header.current.style.setProperty("--distance", "0%")
+          : header.current.style.setProperty("--distance", "100%");
+      });
+    }
+  }, [header]);
   useEffect(() => {
     // Navbar Coloring
     if (indexStore.homePageOption) {
       switch (indexStore.homePageOption) {
         case "home":
-          homeLink.current.style.backgroundColor = "#001F3F";
-          jobSearchLink.current.style.backgroundColor = "#4C607E";
-          employersLink.current.style.backgroundColor = "#4C607E";
-          aboutUsLink.current.style.backgroundColor = "#4C607E";
-          careersLink.current.style.backgroundColor = "#4C607E";
+          homeLink.current.style.backgroundColor = "#4C607E";
+          jobSearchLink.current.style.backgroundColor = "#001F3F";
+          employersLink.current.style.backgroundColor = "#001F3F";
+          aboutUsLink.current.style.backgroundColor = "#001F3F";
+          careersLink.current.style.backgroundColor = "#001F3F";
           break;
 
         case "jobsearch":
-          homeLink.current.style.backgroundColor = "#4C607E";
-          jobSearchLink.current.style.backgroundColor = "#001F3F";
-          employersLink.current.style.backgroundColor = "#4C607E";
-          aboutUsLink.current.style.backgroundColor = "#4C607E";
-          careersLink.current.style.backgroundColor = "#4C607E";
+          homeLink.current.style.backgroundColor = "#001F3F";
+          jobSearchLink.current.style.backgroundColor = "#4C607E";
+          employersLink.current.style.backgroundColor = "#001F3F";
+          aboutUsLink.current.style.backgroundColor = "#001F3F";
+          careersLink.current.style.backgroundColor = "#001F3F";
           break;
 
         case "employer":
-          homeLink.current.style.backgroundColor = "#4C607E";
-          jobSearchLink.current.style.backgroundColor = "#4C607E";
-          employersLink.current.style.backgroundColor = "#001F3F";
-          aboutUsLink.current.style.backgroundColor = "#4C607E";
-          careersLink.current.style.backgroundColor = "#4C607E";
+          homeLink.current.style.backgroundColor = "#001F3F";
+          jobSearchLink.current.style.backgroundColor = "#001F3F";
+          employersLink.current.style.backgroundColor = "#4C607E";
+          aboutUsLink.current.style.backgroundColor = "#001F3F";
+          careersLink.current.style.backgroundColor = "#001F3F";
           break;
 
         case "about":
-          homeLink.current.style.backgroundColor = "#4C607E";
-          jobSearchLink.current.style.backgroundColor = "#4C607E";
-          employersLink.current.style.backgroundColor = "#4C607E";
-          aboutUsLink.current.style.backgroundColor = "#001F3F";
-          careersLink.current.style.backgroundColor = "#4C607E";
+          homeLink.current.style.backgroundColor = "#001F3F";
+          jobSearchLink.current.style.backgroundColor = "#001F3F";
+          employersLink.current.style.backgroundColor = "#001F3F";
+          aboutUsLink.current.style.backgroundColor = "#4C607E";
+          careersLink.current.style.backgroundColor = "#001F3F";
           break;
 
         case "careers":
-          homeLink.current.style.backgroundColor = "#4C607E";
-          jobSearchLink.current.style.backgroundColor = "#4C607E";
-          employersLink.current.style.backgroundColor = "#4C607E";
-          aboutUsLink.current.style.backgroundColor = "#4C607E";
-          careersLink.current.style.backgroundColor = "#001F3F";
+          homeLink.current.style.backgroundColor = "#001F3F";
+          jobSearchLink.current.style.backgroundColor = "#001F3F";
+          employersLink.current.style.backgroundColor = "#001F3F";
+          aboutUsLink.current.style.backgroundColor = "#001F3F";
+          careersLink.current.style.backgroundColor = "#4C607E";
           break;
       }
     }

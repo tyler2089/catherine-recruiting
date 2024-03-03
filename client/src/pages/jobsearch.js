@@ -22,7 +22,6 @@ function JobSearch() {
         <div className="jobcard" key={job.ID}>
           <div className="jobcard-title" onClick={() => setJobSelection(job)}>
             <h3>{job.TITLE}</h3>
-            <h4>{job.COMPANY}</h4>
             {job.HOURLY === 0 ? (
               <h4>{`From $${formattedSalary}`}</h4>
             ) : (

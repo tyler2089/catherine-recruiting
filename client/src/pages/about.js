@@ -15,44 +15,55 @@ function AboutUs() {
         <div className="about-section">
           <h1>Who we are</h1>
           <p>
-            Bank Talent Solutions is not just a recruitment agency; we are your
-            strategic partner in talent acquisition. With a deep understanding
-            of the unique demands and nuances of the financial services sector,
-            we have built a reputation for delivering unparalleled recruitment
-            solutions. Our team comprises seasoned industry experts and
-            recruitment specialists who are committed to identifying and
-            attracting the best talent for your organization.
+            Bank Talent Solutions is your strategic partner in talent
+            acquisition. Our expertise lies in understanding the unique demands
+            of the financial services sector, allowing us to deliver
+            unparalleled recruitment solutions.
           </p>
-          <h2>We're different than the rest</h2>
-          <p>
-            <span className="about-highlight">Industry Insight:</span> Our team
-            possesses an in-depth knowledge of the mortgage, banking,
-            compliance, IT, and administration sectors. This expertise allows us
-            to navigate the specific requirements of each industry and tailor
-            our recruitment approach accordingly.<br></br> <br></br>
-            <span className="about-highlight">Personalized Approach:</span> We
-            recognize that every client and candidate is unique. Our
-            personalized approach involves understanding your organization's
-            culture, values, and specific hiring needs to ensure the perfect
-            match between talent and opportunity.<br></br> <br></br>
-            <span className="about-highlight">Extensive Network:</span>
-            Leveraging our extensive network of professionals within the
-            financial services realm, we can quickly connect you with qualified
-            candidates who possess the skills and experience necessary to drive
-            your business forward.<br></br> <br></br>
-            <span className="about-highlight">
-              Cutting-edge Technology:
-            </span>{" "}
-            Bank Talent Solutions utilizes cutting-edge recruitment technology
-            to streamline the hiring process, providing efficient and effective
-            solutions that save you time and resources. <br></br> <br></br>
-            <span className="about-highlight">
-              Commitment to Excellence:
-            </span>{" "}
-            Our commitment to excellence is unwavering. We take pride in
-            maintaining the highest standards of professionalism, integrity, and
-            confidentiality throughout the recruitment process.
-          </p>
+          <h2>Here&#39;s why we stand out</h2>
+          <ul>
+            <li>
+              <span className="about-highlight">Industry Insight:</span> Our
+              team comprises seasoned industry experts and recruitment
+              specialists who posess in-depth knowledge of the financial
+              services Industry. This expertise enables us to tailor our
+              approach to meet the specific requirements of our clients.
+            </li>
+            <li>
+              <span className="about-highlight">Personalized Approach:</span> We
+              recognize that every client and candidate is unique. Our
+              personalized approach involves understanding your
+              organization&#39;s culture, values, and specific hiring needs.
+              This ensures a perfect match between talent and opportunity.
+            </li>
+            <li>
+              <span className="about-highlight">Extensive Network:</span>
+              Leveraging our extensive network of professionals within the
+              financial services realm, we can quickly connect you with
+              qualified candidates who possess the skills and experience
+              necessary to drive your business forward.
+            </li>
+            <li>
+              <span className="about-highlight">Cutting-edge Technology:</span>
+              Bank Talent Solutions utilizes cutting-edge recruitment technology
+              to streamline the hiring process. Our efficient and effective
+              solutions save you time and resources.
+            </li>
+            <li>
+              <span className="about-highlight">Commitment to Excellence:</span>
+              unwavering commitment to excellence is reflected in maintaining
+              the highest standards of professionalism, integrity, and
+              confidentiality throughout the recruitment process. We take pride
+              in maintaining the highest standards of professionalism,
+              integrity, and confidentiality throughout the recruitment process.
+            </li>
+            <p>
+              Whether you&#39;re seeking top talent or exploring new career
+              opportunities, Bank Talent Solutions is here to support your
+              success.
+            </p>
+          </ul>
+
           <div className="about-buttons">
             <h1 onClick={() => dispatch(setHomePageOption("jobsearch"))}>
               Find a job

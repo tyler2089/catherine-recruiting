@@ -7,7 +7,7 @@ import Admin from "../components/admin"; // Import your admin component
 
 const AppRouter = () => {
   return (
-    <Router basename="/catherine-recruiting">
+    <Router>
       <Routes>
         <Route path="/" element={<App />}></Route>
         <Route path="/admin" element={<Admin />}></Route>

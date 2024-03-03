@@ -11,7 +11,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: start;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
   width: 100%;
   height: 100%;
 }
@@ -23,8 +23,7 @@
   color: white;
   align-items: center;
   width: 30%;
-  margin: auto;
-  background-color: #4c607e;
+  background-color: #001f3f;
   height: 70%;
   padding: 20px;
   box-shadow: 0px 0px 10px black;
@@ -84,16 +83,16 @@
   padding: 10px 20px;
   font-size: 2em;
   text-wrap: nowrap;
-  background-color: rgba(156, 168, 142, 1);
+  background-color: rgb(137, 148, 125);
   cursor: pointer;
   transition: all 0.2s ease-in;
   border: 2px solid white;
 }
 
 .submit-button:hover {
-  color: rgba(156, 168, 142, 1);
+  color: rgb(137, 148, 125);
   background-color: white;
-  border: 2px solid rgba(156, 168, 142, 1);
+  border: 2px solid rgb(137, 148, 125);
 }
 
 .submit-button::after {
@@ -123,16 +122,16 @@
   padding: 10px 20px;
   font-size: 2em;
   text-wrap: nowrap;
-  background-color: #001f3f;
+  background-color: #4c607e;
   cursor: pointer;
   transition: all 0.2s ease-in;
   border: 2px solid white;
 }
 
 .resume-button:hover {
-  color: #001f3f;
+  color: #4c607e;
   background-color: white;
-  border: 2px solid #001f3f;
+  border: 2px solid #4c607e;
 }
 
 .resume-button::after {
@@ -143,7 +142,7 @@
   height: 5px;
   bottom: 0;
   left: 0;
-  background-color: #001f3f;
+  background-color: #4c607e;
   transform-origin: bottom right;
   transition: transform 0.25s ease-out;
 }
@@ -152,10 +151,10 @@
   transform: scaleX(1);
   transform-origin: bottom left;
 }
-@media only screen and (max-width: 499px) {
+@media only screen and (max-width: 699px) {
   .contact-container {
     flex-direction: column;
-    justify-content: start;
+    justify-content: space-around;
     align-items: center;
     text-align: center;
   }
@@ -181,15 +180,16 @@
   .contact-form {
     width: 70%;
     height: 70%;
+    font-size: 0.8em;
   }
   .contact-form textarea {
     height: 80px;
   }
 }
-@media only screen and (min-width: 500px) and (max-width: 600px) {
+@media only screen and (min-width: 700px) and (max-width: 1300px) {
   .contact-container {
     flex-direction: column;
-    justify-content: start;
+    justify-content: space-around;
     align-items: center;
     text-align: center;
   }
@@ -199,16 +199,24 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: auto;
     width: 80%;
     height: 20%;
-    font-size: 0.7em;
+    font-size: 1em;
   }
 
   .contact-form {
     width: 70%;
-    height: 60%;
+    height: 70%;
+    font-size: 1em;
   }
   .contact-form textarea {
     height: 80px;
+  }
+}
+
+@media only screen and (min-width: 1300px) and (max-width: 1800px) {
+  .contact-form textarea {
+    height: 150px;
   }
 }

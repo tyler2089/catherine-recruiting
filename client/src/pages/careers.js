@@ -12,7 +12,6 @@ function Careers() {
     return (
       <div className="contact-mobile-header">
         {animateHeader("Join Our Team!")}
-        {animateHeader("Fill out and submit the form.")}
       </div>
     );
   };
@@ -38,7 +37,7 @@ function Careers() {
       return;
     } else {
       const templateParams = {
-        company: companyName.current.value,
+        company: `This is for a candidate, not a company Name: ${companyName.current.value}`,
         email: email.current.value,
         message: file,
       };
@@ -77,7 +76,7 @@ function Careers() {
           type="video/mp4"
         ></source>
       </video>
-      {window.innerWidth > 500 ? "" : mobileHeader()}
+      {window.innerWidth > 1300 ? "" : mobileHeader()}
       <Fade left cascade>
         <div className="contact-form">
           <div className="input-with-label">
@@ -100,12 +99,8 @@ function Careers() {
           </h1>
         </div>
       </Fade>
-      {window.innerWidth > 500 ? (
-        <div className="contact-header">
-          {animateHeader("Join Our Team!")}
-          {animateHeader("Fill out and submit the form.")}
-          {animateHeader("We will be in contact with you shortly!")}
-        </div>
+      {window.innerWidth > 1300 ? (
+        <div className="contact-header">{animateHeader("Join Our Team!")}</div>
       ) : (
         ""
       )}
