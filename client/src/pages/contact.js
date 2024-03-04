@@ -73,21 +73,20 @@ function Contact() {
       ) : (
         <div className="contact-header">
           {animateHeader("We're glad you're here!")}
-          {animateHeader("How can we help?")}
         </div>
       )}
       <Fade right cascade>
         <div className="contact-form">
           <div className="input-with-label">
-            <h1>Company Name*</h1>
+            <h1>Company Name</h1>
             <input type="text" name="name" ref={companyName}></input>
           </div>
           <div className="input-with-label">
-            <h1>Email*</h1>
+            <h1>Email</h1>
             <input type="text" name="email" ref={email}></input>
           </div>
           <div className="input-with-label">
-            <h1>What can we help you with?*</h1>
+            <h1>How can we help?</h1>
             <textarea name="help-text" ref={helpText}></textarea>
           </div>
           <h1 className="submit-button" onClick={() => handleSubmit()}>

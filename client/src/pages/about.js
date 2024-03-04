@@ -17,7 +17,7 @@ function AboutUs() {
           <p>
             Bank Talent Solutions is your strategic partner in talent
             acquisition. Our expertise lies in understanding the unique demands
-            of the financial services sector, allowing us to deliver
+            of the financial services industry, allowing us to deliver
             unparalleled recruitment solutions.
           </p>
           <h2>Here&#39;s why we stand out</h2>
@@ -51,7 +51,7 @@ function AboutUs() {
             </li>
             <li>
               <span className="about-highlight">Commitment to Excellence:</span>
-              unwavering commitment to excellence is reflected in maintaining
+              Unwavering commitment to excellence is reflected in maintaining
               the highest standards of professionalism, integrity, and
               confidentiality throughout the recruitment process. We take pride
               in maintaining the highest standards of professionalism,
@@ -69,7 +69,7 @@ function AboutUs() {
               Find a job
             </h1>
             <h1 onClick={() => dispatch(setHomePageOption("employer"))}>
-              Work with us
+              Find talent
             </h1>
           </div>
         </div>

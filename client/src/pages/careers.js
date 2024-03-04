@@ -80,15 +80,15 @@ function Careers() {
       <Fade left cascade>
         <div className="contact-form">
           <div className="input-with-label">
-            <h1>Your Name*</h1>
+            <h1>Your Name</h1>
             <input type="text" name="name" ref={companyName}></input>
           </div>
           <div className="input-with-label">
-            <h1>Email*</h1>
+            <h1>Email</h1>
             <input type="text" name="email" ref={email}></input>
           </div>
           <div className="input-with-label">
-            <h1>Resume *</h1>
+            <h1>Resume</h1>
             {file ? <h1>{file.name}</h1> : <h3></h3>}
             <button onClick={handleFileUpload} className="resume-button">
               Upload Resume

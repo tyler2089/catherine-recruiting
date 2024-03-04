@@ -243,7 +243,6 @@ function JobSearch() {
             X
           </h1>
           <h1 className="jobapply-description-title">{jobSelection.TITLE}</h1>
-          <h2>{jobSelection.COMPANY}</h2>
           {jobSelection.HOURLY === 0 ? (
             <h3>{`From $${parseFloat(
               jobSelection.SALARY

@@ -39,7 +39,7 @@
 
 .company-name {
   opacity: 100;
-  margin: 20px 40px;
+  margin: 0;
   background-image: -webkit-linear-gradient(
     45deg,
     white,
@@ -56,12 +56,27 @@
   height: 70%;
   height: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: start;
   width: 35%;
   text-wrap: wrap;
 }
 
+.company-name-container img {
+  height: 2em;
+}
+
+.veteran-owned {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  width: 60%;
+}
+.company-name-container h3 {
+  margin: 0;
+  font-style: italic;
+}
 .navbar {
   width: 60%;
   height: 100%;
@@ -175,6 +190,7 @@
     width: 100%;
     height: 80%;
     font-size: 0.8em;
+    align-items: center;
   }
   .title-card {
     display: flex;
@@ -213,6 +229,7 @@
 @media only screen and (min-width: 500px) and (max-width: 1300px) {
   .company-name-container {
     width: 100%;
+    align-items: center;
   }
   .title-card {
     display: flex;
@@ -242,5 +259,11 @@
   .title-card {
     font-size: 1em;
     text-align: center;
+  }
+}
+
+@media only screen and (min-width: 1301px) and (max-width: 1600px) {
+  .company-name {
+    font-size: 1.8em;
   }
 }

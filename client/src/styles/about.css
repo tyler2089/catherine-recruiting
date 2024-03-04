@@ -6,12 +6,12 @@
   justify-content: start;
   height: 100%;
   width: 100%;
-  background: rgb(156, 168, 142);
+  background: #4c607e;
   background: linear-gradient(
     180deg,
-    rgb(137, 148, 125) 0%,
-    rgb(137, 148, 125) 45%,
-    rgba(112, 112, 112, 0) 46%
+    rgba(112, 112, 112, 0) 0%,
+    rgba(112, 112, 112, 0) 45%,
+    #4c607e 46%
   );
 }
 
@@ -56,8 +56,8 @@ ul {
 }
 
 .about-buttons h1 {
-  border: 2px solid rgb(137, 148, 125);
-  color: rgb(137, 148, 125);
+  border: 2px solid #4c607e;
+  color: #4c607e;
   padding: 5px 20px;
   border-radius: 20px;
   cursor: pointer;
@@ -65,7 +65,7 @@ ul {
 }
 
 .about-buttons h1:hover {
-  background-color: rgb(137, 148, 125);
+  background-color: #4c607e;
   color: white;
 }
 

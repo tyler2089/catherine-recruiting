@@ -20,14 +20,20 @@
   cursor: pointer;
   text-decoration: underline;
   transition: all 0.2s ease-in;
+  margin: 0;
+}
+
+.jobcard-title h4 {
+  margin: 10px 0px;
 }
 
 .jobcard-title h3:hover {
-  color: #9ca88e;
+  color: #4c607e;
 }
 .jobcard-title > * {
   margin: 5px 10px;
 }
+
 .jobsearch-container {
   display: flex;
   flex-direction: column;
@@ -69,6 +75,8 @@
   border: 2px solid white;
   cursor: pointer;
   transition: all 0.2s ease-in;
+  background-color: #001f3f;
+  color: white;
 }
 
 .selected {
@@ -76,14 +84,14 @@
   text-wrap: nowrap;
   cursor: pointer;
   transition: all 0.2s ease-in;
-  background-color: #9ca88e;
-  border: 2px solid #9ca88e !important;
+  background-color: #4c607e !important;
+  border: 2px solid #4c607e !important;
   color: white;
 }
 
 .jobfilter-navbar h2:hover {
-  background-color: #9ca88e;
-  border: 2px solid #9ca88e;
+  background-color: #4c607e;
+  border: 2px solid #4c607e;
   color: white;
 }
 
@@ -96,13 +104,15 @@
   border-bottom-right-radius: 20px;
   border-top-right-radius: 20px;
   padding: none;
+  font-size: 0.8em;
 }
 
 .jobfilter-searchbar h2 {
-  padding: 4px 10px 4px 5px;
+  padding: 2px 10px 3px 4px;
   margin: 0px;
   border: none;
-  background-color: #9ca88e;
+  background-color: #001f3f;
+  color: white;
   border-bottom-right-radius: 20px;
   border-top-right-radius: 20px;
   cursor: pointer;
@@ -111,6 +121,7 @@
 
 .jobfilter-searchbar h2:hover {
   color: white;
+  background-color: #4c607e;
 }
 
 .job-container {
@@ -128,16 +139,16 @@
 .reset-search {
   background-color: white;
   padding: 5px 15px;
-  border: 2px solid red;
+  border: 2px solid black;
   border-radius: 20px;
   margin-left: 10px;
-  color: red;
+  color: black;
   cursor: pointer;
   transition: all 0.2s ease-in;
 }
 
 .reset-search:hover {
-  background-color: red;
+  background-color: black;
   color: white;
 }
 @media only screen and (max-width: 499px) {
