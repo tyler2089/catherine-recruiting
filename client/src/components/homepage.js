@@ -27,12 +27,13 @@ function Homepage() {
 
   useEffect(() => {
     if (header.current) {
-      header.current.style.setProperty("--distance", "100%");
       header.current.addEventListener("transitionend", () => {
         header.current.style.getPropertyValue("--distance") === "100%"
           ? header.current.style.setProperty("--distance", "0%")
           : header.current.style.setProperty("--distance", "100%");
       });
+
+      header.current.style.setProperty("--distance", "100%");
     }
   }, [header]);
   useEffect(() => {
