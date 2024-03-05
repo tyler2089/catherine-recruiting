@@ -46,7 +46,7 @@ function HomeIndex() {
         {indexStore.calledApi
           ? window.innerWidth < tablet
             ? mobileHeader()
-            : animateHeader("Where talent meets opportunity.")
+            : animateHeader("New Opportunities Await")
           : ""}
       </div>
       <div className="button-container">

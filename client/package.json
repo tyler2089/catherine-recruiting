@@ -1,7 +1,7 @@
 {
   "name": "client",
   "version": "0.1.0",
-  "homepage": ".",
+  "homepage": "https://tyler2089.github.io/catherine-recruiting/",
   "private": true,
   "dependencies": {
     "@emailjs/browser": "^3.12.1",
