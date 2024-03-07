@@ -4,6 +4,7 @@ import { useEffect, useState, useRef } from "react";
 import { useSelector } from "react-redux";
 import Fade from "react-reveal/Fade";
 import emailjs from "@emailjs/browser";
+import convertToHTML from "../components/convertToHtml";
 function JobSearch() {
   const [filterSelection, setFilterSelection] = useState(null);
   const [jobSelection, setJobSelection] = useState(null);
@@ -250,7 +251,12 @@ function JobSearch() {
           ) : (
             <h3>{`$${jobSelection.SALARY}/hour`}</h3>
           )}
-          <p style={{ whiteSpace: "pre-line" }}>{jobSelection.DESCRIPTION}</p>
+          <p
+            style={{ whiteSpace: "pre-line" }}
+            dangerouslySetInnerHTML={{
+              __html: convertToHTML(jobSelection.DESCRIPTION),
+            }}
+          ></p>
         </div>
         <div className="jobapply-application">
           <h2>&#9735; Apply</h2>

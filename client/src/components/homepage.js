@@ -109,14 +109,7 @@ function Homepage() {
           <h1 className="company-name" ref={header}>
             Bank Talent Solutions
           </h1>
-          <div
-            className="veteran-owned"
-            style={
-              window.innerWidth > 1300
-                ? { display: "flex" }
-                : { display: "none" }
-            }
-          >
+          <div className="veteran-owned">
             <img src={require("../static/veterans.png")}></img>
           </div>
         </div>

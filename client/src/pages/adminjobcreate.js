@@ -136,9 +136,6 @@ const AdminJobCreate = () => {
                 textarea.selectionStart = textarea.selectionEnd = start + 1;
               }
             }}
-            onChange={(e) => {
-              console.log(jobDescription.current.value);
-            }}
           />
         </div>
 

@@ -66,7 +66,7 @@ function AboutUs() {
 
           <div className="about-buttons">
             <h1 onClick={() => dispatch(setHomePageOption("jobsearch"))}>
-              Find a job
+              Search Jobs
             </h1>
             <h1 onClick={() => dispatch(setHomePageOption("employer"))}>
               Find talent

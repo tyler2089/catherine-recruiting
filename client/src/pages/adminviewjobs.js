@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useState, useRef } from "react";
 import setJobList from "../actions/setJobList";
@@ -6,6 +6,7 @@ import fetchData from "../components/fetchjobdata.js";
 import deleteJob from "../components/admindeletejob";
 import "../styles/adminviewjobs.css";
 import postData from "../components/adminpostjob.js";
+import convertToHTML from "../components/convertToHtml.js";
 const AdminViewJobs = ({ jobList }) => {
   const indexStore = useSelector((state) => state.index);
   const dispatch = useDispatch();
@@ -63,6 +64,33 @@ const AdminViewJobs = ({ jobList }) => {
                     className="job-info-textarea-editing"
                     defaultValue={job.DESCRIPTION}
                     ref={description}
+                    onKeyDown={(e) => {
+                      if (e.key === "Enter") {
+                        e.preventDefault();
+                        const textarea = e.target;
+                        const start = textarea.selectionStart;
+                        const end = textarea.selectionEnd;
+                        const value = textarea.value;
+                        textarea.value =
+                          value.substring(0, start) +
+                          "\n" +
+                          value.substring(end);
+                        textarea.selectionStart = textarea.selectionEnd =
+                          start + 1;
+                      } else if (e.key === "Tab") {
+                        e.preventDefault();
+                        const textarea = e.target;
+                        const start = textarea.selectionStart;
+                        const end = textarea.selectionEnd;
+                        const value = textarea.value;
+                        textarea.value =
+                          value.substring(0, start) +
+                          "\t" +
+                          value.substring(end);
+                        textarea.selectionStart = textarea.selectionEnd =
+                          start + 1;
+                      }
+                    }}
                   />
                 </div>
                 <div>
@@ -75,11 +103,16 @@ const AdminViewJobs = ({ jobList }) => {
                 <h2>{job.TITLE}</h2>
                 <p>Company: {job.COMPANY}</p>
                 <p>
-                  Industry:{" "}
+                  Industry:
                   {job.GENRE.charAt(0).toUpperCase() +
                     job.GENRE.substr(1, job.GENRE.length - 1)}
                 </p>
-                <p style={{ whiteSpace: "pre-line" }}>{job.DESCRIPTION}</p>
+                <p
+                  style={{ whiteSpace: "pre-line" }}
+                  dangerouslySetInnerHTML={{
+                    __html: convertToHTML(job.DESCRIPTION),
+                  }}
+                ></p>
                 <p>
                   Salary:{" "}
                   {job.HOURLY === 0
