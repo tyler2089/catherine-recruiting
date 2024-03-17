@@ -16,6 +16,7 @@ const AdminViewJobs = ({ jobList }) => {
   const industry = useRef(null);
   const description = useRef(null);
   const salary = useRef(null);
+  const location = useRef(null);
   const handleDelete = (jobId) => {
     // Add your logic here to handle the deletion of the job with the given jobId
     deleteJob(indexStore.accessToken, jobId).then((result) => {
@@ -38,6 +39,14 @@ const AdminViewJobs = ({ jobList }) => {
                 <div>
                   <h2>Title</h2>
                   <input type="text" defaultValue={job.TITLE} ref={title} />
+                </div>
+                <div>
+                  <h3>Location</h3>
+                  <input
+                    type="text"
+                    defaultValue={job.LOCATION}
+                    ref={location}
+                  />
                 </div>
                 <div>
                   <h3>Company</h3>
@@ -101,6 +110,7 @@ const AdminViewJobs = ({ jobList }) => {
             ) : (
               <div className="job-card-info">
                 <h2>{job.TITLE}</h2>
+                <p>Location: {job.LOCATION}</p>
                 <p>Company: {job.COMPANY}</p>
                 <p>
                   Industry:
@@ -134,6 +144,7 @@ const AdminViewJobs = ({ jobList }) => {
                       company.current.value,
                       job.HOURLY,
                       industry.current.value,
+                      location.current.value,
                       job.ID
                     ).then((result) => {
                       fetchData().then((result) => {

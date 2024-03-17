@@ -20,6 +20,7 @@ function HomeIndex() {
       </div>
     );
   };
+
   useEffect(() => {
     if (indexStore.homePageOption === "home") {
       setHomeSelected(true);
@@ -38,7 +39,11 @@ function HomeIndex() {
         className="background-video"
       >
         <source
-          src={require("../static/homeindexvideo.mp4")}
+          src={
+            window.innerWidth > tablet
+              ? require("../static/homeindexvideo.mp4")
+              : require("../static/homeindexvideomobile.mp4")
+          }
           type="video/mp4"
         ></source>
       </video>

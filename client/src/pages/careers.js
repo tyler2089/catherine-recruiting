@@ -72,33 +72,45 @@ function Careers() {
         className="background-video"
       >
         <source
-          src={require("../static/careersvideo.mp4")}
+          src={
+            window.innerWidth > 1300
+              ? require("../static/careersvideo.mp4")
+              : require("../static/careersvideomobile.mp4")
+          }
           type="video/mp4"
         ></source>
       </video>
       {window.innerWidth > 1300 ? "" : mobileHeader()}
-      <Fade left cascade>
-        <div className="contact-form">
-          <div className="input-with-label">
-            <h1>Your Name</h1>
-            <input type="text" name="name" ref={companyName}></input>
+      <div className="contact-form-container">
+        <Fade left cascade>
+          <div className="contact-form">
+            <div className="input-with-label">
+              <h1>Your Name</h1>
+              <input type="text" name="name" ref={companyName}></input>
+            </div>
+            <div className="input-with-label">
+              <h1>Email</h1>
+              <input type="text" name="email" ref={email}></input>
+            </div>
+            <div className="input-with-label">
+              <h1>Resume</h1>
+              {file ? <h1>{file.name}</h1> : <h3></h3>}
+              <button onClick={handleFileUpload} className="resume-button">
+                Upload Resume
+              </button>
+            </div>
+            <h1 className="submit-button" onClick={() => handleSubmit()}>
+              Submit
+            </h1>
           </div>
-          <div className="input-with-label">
-            <h1>Email</h1>
-            <input type="text" name="email" ref={email}></input>
+        </Fade>
+        <Fade left cascade>
+          <div className="contact-info">
+            <h1>Contact us at</h1>
+            <h1>{"+1(844) 554-8383"}</h1>
           </div>
-          <div className="input-with-label">
-            <h1>Resume</h1>
-            {file ? <h1>{file.name}</h1> : <h3></h3>}
-            <button onClick={handleFileUpload} className="resume-button">
-              Upload Resume
-            </button>
-          </div>
-          <h1 className="submit-button" onClick={() => handleSubmit()}>
-            Submit
-          </h1>
-        </div>
-      </Fade>
+        </Fade>
+      </div>
       {window.innerWidth > 1300 ? (
         <div className="contact-header">{animateHeader("Join Our Team!")}</div>
       ) : (

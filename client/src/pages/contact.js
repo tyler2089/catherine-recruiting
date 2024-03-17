@@ -64,7 +64,11 @@ function Contact() {
         className="background-video"
       >
         <source
-          src={require("../static/contactvideo.mp4")}
+          src={
+            window.innerWidth > 1300
+              ? require("../static/contactvideo.mp4")
+              : require("../static/contactvideomobile.mp4")
+          }
           type="video/mp4"
         ></source>
       </video>
@@ -75,25 +79,34 @@ function Contact() {
           {animateHeader("We're glad you're here!")}
         </div>
       )}
-      <Fade right cascade>
-        <div className="contact-form">
-          <div className="input-with-label">
-            <h1>Company Name</h1>
-            <input type="text" name="name" ref={companyName}></input>
+
+      <div className="contact-form-container">
+        <Fade right cascade>
+          <div className="contact-form">
+            <div className="input-with-label">
+              <h1>Company Name</h1>
+              <input type="text" name="name" ref={companyName}></input>
+            </div>
+            <div className="input-with-label">
+              <h1>Email</h1>
+              <input type="text" name="email" ref={email}></input>
+            </div>
+            <div className="input-with-label">
+              <h1>How can we help?</h1>
+              <textarea name="help-text" ref={helpText}></textarea>
+            </div>
+            <h1 className="submit-button" onClick={() => handleSubmit()}>
+              Submit
+            </h1>
           </div>
-          <div className="input-with-label">
-            <h1>Email</h1>
-            <input type="text" name="email" ref={email}></input>
+        </Fade>
+        <Fade right cascade>
+          <div className="contact-info">
+            <h1>Contact us at</h1>
+            <h1>{"+1(844) 554-8383"}</h1>
           </div>
-          <div className="input-with-label">
-            <h1>How can we help?</h1>
-            <textarea name="help-text" ref={helpText}></textarea>
-          </div>
-          <h1 className="submit-button" onClick={() => handleSubmit()}>
-            Submit
-          </h1>
-        </div>
-      </Fade>
+        </Fade>
+      </div>
     </div>
   );
 }

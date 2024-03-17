@@ -22,13 +22,40 @@
   justify-content: space-around;
   color: white;
   align-items: center;
-  width: 30%;
-  background-color: #001f3f;
+  width: 90%;
+  background-color: rgba(0, 31, 63, 1);
   height: 70%;
   padding: 20px;
   box-shadow: 0px 0px 10px black;
 }
 
+.contact-form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 30%;
+  height: 95%;
+  font-family: "GT Walsheim Pro";
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 15%;
+  color: white;
+  font-size: 0.8em;
+  padding: 15px;
+  border-radius: 20%;
+  background-color: rgba(0, 31, 63, 1);
+  box-shadow: 0px 0px 10px black;
+}
+
+.contact-info > * {
+  margin: 5px;
+}
 .contact-header {
   display: flex;
   flex-direction: column;
@@ -60,7 +87,7 @@
 }
 
 .input-with-label textarea {
-  height: 250px;
+  height: 125px;
   width: 100%;
   resize: none;
 }
@@ -165,7 +192,7 @@
     justify-content: start;
     align-items: center;
     width: 80%;
-    height: 20%;
+    height: 15%;
     font-size: 0.6em;
     margin: 0px;
   }
@@ -178,12 +205,27 @@
   }
 
   .contact-form {
-    width: 70%;
     height: 70%;
+    background-color: rgba(0, 31, 63, 0.65);
+  }
+
+  .contact-info {
+    background-color: rgba(0, 31, 63, 0.65);
+  }
+  .contact-form-container {
+    width: 70%;
+    height: 80%;
     font-size: 0.8em;
   }
   .contact-form textarea {
-    height: 80px;
+    height: 40px;
+  }
+
+  .submit-button {
+    font-size: 1.3em;
+  }
+  .resume-button {
+    font-size: 1.3em;
   }
 }
 @media only screen and (min-width: 700px) and (max-width: 1300px) {
@@ -209,6 +251,16 @@
     width: 70%;
     height: 70%;
     font-size: 1em;
+    background-color: rgba(0, 31, 63, 0.65);
+  }
+
+  .contact-info {
+    background-color: rgba(0, 31, 63, 0.65);
+  }
+  .contact-form-container {
+    width: 80%;
+    height: 80%;
+    font-size: 0.8em;
   }
   .contact-form textarea {
     height: 80px;

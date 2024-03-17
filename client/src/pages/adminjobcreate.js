@@ -13,6 +13,7 @@ const AdminJobCreate = () => {
   const companyName = useRef();
   const hourly = useRef();
   const industry = useRef();
+  const location = useRef();
   const indexStore = useSelector((state) => state.index);
 
   const checkPostData = () => {
@@ -20,7 +21,9 @@ const AdminJobCreate = () => {
       jobTitle.current.value === "" ||
       jobSalary.current.value === "" ||
       jobDescription.current.value === "" ||
-      companyName.current.value === ""
+      companyName.current.value === "" ||
+      industry.current.value === "" ||
+      location.current.value === ""
     ) {
       alert("Please fill out all fields.");
     } else {
@@ -31,7 +34,8 @@ const AdminJobCreate = () => {
         jobDescription.current.value,
         companyName.current.value,
         hourly.current.checked ? 1 : 0,
-        industry.current.value
+        industry.current.value,
+        location.current.value
       );
 
       if (result) {
@@ -64,7 +68,10 @@ const AdminJobCreate = () => {
         <div className="form-group">
           <label htmlFor="industry">Job Industry:</label>
           <select id="industry" name="industry" ref={industry}>
-            <option value="banking">Banking</option>
+            <option value="accounting">Accounting</option>
+            <option value="operations">Operations</option>
+            <option value="hr">HR</option>
+            <option value="marketing">Marketing</option>
             <option value="executive">Executive</option>
             <option value="compliance">Compliance</option>
             <option value="it">I.T.</option>
@@ -72,7 +79,10 @@ const AdminJobCreate = () => {
             <option value="mortgage">Mortgage</option>
           </select>
         </div>
-
+        <div className="form-group">
+          <label htmlFor="location">Location:</label>
+          <input type="text" id="location" name="location" ref={location} />
+        </div>
         <div className="form-group">
           <label htmlFor="companyName">Company Name:</label>
           <input

@@ -110,10 +110,6 @@
 }
 
 @media only screen and (max-width: 1100px) {
-  .background-video {
-    min-width: 100%;
-    width: auto;
-  }
   .homeindex-header {
     font-size: 1em;
     margin: auto;

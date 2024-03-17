@@ -6,9 +6,9 @@ async function postData(
   companyName,
   jobSalaryType,
   jobGenre,
+  jobLocation,
   jobId = null
 ) {
-  console.log(jobDescription);
   const result = await fetch(
     "https://saut95n2e9.execute-api.us-east-1.amazonaws.com/Test/LambdaTest",
     {
@@ -20,6 +20,7 @@ async function postData(
         jobGenre: jobGenre,
         companyName: companyName,
         jobSalaryType: jobSalaryType,
+        jobLocation: jobLocation,
         jobId: jobId ? jobId : null,
       },
       body: JSON.stringify(jobDescription),

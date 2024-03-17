@@ -10,8 +10,8 @@
 }
 
 .admin-create-form {
-  width: 50%;
-  height: 85%;
+  width: 60%;
+  height: 90%;
   box-shadow: 0px 0px 5px black;
   background-color: beige;
   display: flex;
@@ -24,6 +24,7 @@
 .admin-submit-button {
   font-size: 1.7em;
   border: 2px solid black;
+  margin: 5px;
   padding: 5px 15px;
   border-radius: 10px;
   background-color: seagreen;

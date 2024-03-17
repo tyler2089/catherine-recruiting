@@ -23,17 +23,19 @@ function JobSearch() {
         <div className="jobcard" key={job.ID}>
           <div className="jobcard-title" onClick={() => setJobSelection(job)}>
             <h3>{job.TITLE}</h3>
+            <h4>{job.LOCATION}</h4>
             {job.HOURLY === 0 ? (
-              <h4>{`From $${formattedSalary}`}</h4>
+              <h4>{`To $${formattedSalary}`}</h4>
             ) : (
               <h4>{`$${job.SALARY}/hour`}</h4>
             )}
           </div>
-          <p style={{ whiteSpace: "pre-line" }}>
-            {job.DESCRIPTION.length > 250
-              ? `${job.DESCRIPTION.substring(0, 250)}...`
-              : job.DESCRIPTION}
-          </p>
+          <p
+            style={{ whiteSpace: "pre-line" }}
+            dangerouslySetInnerHTML={{
+              __html: convertToHTML(job.DESCRIPTION),
+            }}
+          ></p>
         </div>
       </Fade>
     );
@@ -148,13 +150,43 @@ function JobSearch() {
         <nav className="jobfilter-navbar">
           <h2
             onClick={() =>
-              filterSelection === "banking"
+              filterSelection === "accounting"
                 ? setFilterSelection(null)
-                : setFilterSelection("banking")
+                : setFilterSelection("accouting")
             }
-            className={filterSelection === "banking" ? "selected" : null}
+            className={filterSelection === "accounting" ? "selected" : null}
           >
-            Banking
+            Accounting
+          </h2>
+          <h2
+            onClick={() =>
+              filterSelection === "operations"
+                ? setFilterSelection(null)
+                : setFilterSelection("operations")
+            }
+            className={filterSelection === "operations" ? "selected" : null}
+          >
+            Operations
+          </h2>
+          <h2
+            onClick={() =>
+              filterSelection === "hr"
+                ? setFilterSelection(null)
+                : setFilterSelection("hr")
+            }
+            className={filterSelection === "hr" ? "selected" : null}
+          >
+            HR
+          </h2>
+          <h2
+            onClick={() =>
+              filterSelection === "marketing"
+                ? setFilterSelection(null)
+                : setFilterSelection("marketing")
+            }
+            className={filterSelection === "marketing" ? "selected" : null}
+          >
+            Marketing
           </h2>
           <h2
             onClick={() =>
@@ -244,10 +276,9 @@ function JobSearch() {
             X
           </h1>
           <h1 className="jobapply-description-title">{jobSelection.TITLE}</h1>
+          <h3>{jobSelection.LOCATION}</h3>
           {jobSelection.HOURLY === 0 ? (
-            <h3>{`From $${parseFloat(
-              jobSelection.SALARY
-            ).toLocaleString()}`}</h3>
+            <h3>{`To $${parseFloat(jobSelection.SALARY).toLocaleString()}`}</h3>
           ) : (
             <h3>{`$${jobSelection.SALARY}/hour`}</h3>
           )}

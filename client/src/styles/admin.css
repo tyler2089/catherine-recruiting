@@ -116,6 +116,9 @@
     height: 60%;
   }
 
+  .admin-navbar-tab {
+    width: 30%;
+  }
   .admin-input-label input {
     width: 80%;
   }
