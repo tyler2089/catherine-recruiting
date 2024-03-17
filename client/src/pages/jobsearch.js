@@ -56,9 +56,24 @@ function JobSearch() {
       return searchJobs();
     }
     switch (filterSelection) {
-      case "banking":
+      case "accounting":
         return indexStore.jobList
-          .filter((job) => job.GENRE === "banking")
+          .filter((job) => job.GENRE === "accounting")
+          .map((job) => produceCard(job));
+
+      case "operations":
+        return indexStore.jobList
+          .filter((job) => job.GENRE === "operations")
+          .map((job) => produceCard(job));
+
+      case "hr":
+        return indexStore.jobList
+          .filter((job) => job.GENRE === "hr")
+          .map((job) => produceCard(job));
+
+      case "marketing":
+        return indexStore.jobList
+          .filter((job) => job.GENRE === "marketing")
           .map((job) => produceCard(job));
 
       case "executive":
